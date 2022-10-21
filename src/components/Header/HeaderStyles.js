@@ -1,5 +1,6 @@
 // import { alpha, makeStyles } from '@material-ui/core/styles';
-import { alpha, makeStyles } from '@mui/material/styles';
+import { alpha } from '@mui/material/styles';
+import { makeStyles } from '@mui/styles';
 // import { makeStyles, alpha } from '@mui/material/styles';
 
 export default makeStyles((theme) => ({
