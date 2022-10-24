@@ -1,5 +1,5 @@
 import React from "react";
-import googleMapReact from "google-map-react";
+import GoogleMapReact from "google-map-react";
 import { Paper, Typography, useMediaQuery } from "@mui/material";
 import { LocationOnOutlined } from "@mui/icons-material";
 import Rating from "@mui/material";
@@ -13,8 +13,8 @@ export default function Map(){
     
     const coordinates = { lat: 0, lng: 0 };
     return(
-        <div className={classes.mapContainer}>
-            <googleMapReact bootstrapURLKeys={{key: ''}}
+        <div >
+            <GoogleMapReact bootstrapURLKeys={{key: ''}}
                             defualtVenter={coordinates}
                             center={coordinates}
                             defualtZoom={14}
@@ -23,7 +23,7 @@ export default function Map(){
                             onChange={''}
                             onChildClick={''} >
 
-            </googleMapReact>
+            </GoogleMapReact>
         </div>
     );
 }

@@ -3,28 +3,28 @@ import { Autocomplete } from "@react-google-maps/api";
 import { AppBar, Toolbar, Typography, InputBase, Box } from "@mui/material";
 import SearchIcon from '@mui/icons-material/Search';
 
-import useStyles from './HeaderStyles';
+// import useStyles from './HeaderStyles';
 
 export default function Header(){
 
-    const classes = useStyles();
+    // const classes = useStyles();
 
     return(
         <AppBar position="static">
-            <Toolbar className={classes.toolbar}>
-                <Typography variant="h5" className={classes.title}>
+            <Toolbar >
+                <Typography variant="h5" >
                     Travel Checker
                 </Typography>
                 <Box display="flex">
-                    <Typography variant="h6" className={classes.title}>
+                    <Typography variant="h6" >
                         Explore new places
                     </Typography>
                     {/* <Autocomplete> */}
-                        <div className={classes.search}>
-                            <div className={classes.searchIcon}>
+                        <div >
+                            <div >
                                 <SearchIcon />
                             </div>
-                            <InputBase placeholder="Search..." classes={{ root: classes.inputRoot, input: classes.inputInput }} />
+                            <InputBase placeholder="Search..."  />
                         </div>
                     {/* </Autocomplete> */}
                 </Box>
