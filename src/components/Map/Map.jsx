@@ -4,7 +4,7 @@ import { Paper, Typography, useMediaQuery } from "@mui/material";
 import { LocationOnOutlined } from "@mui/icons-material";
 import Rating from "@mui/material";
 
-import useStyles from './MapStyles';
+// import useStyles from './MapStyles';
 // const AnyReactComponent = ({ text }) => <div>{text}</div>;
 export default function Map(){
 
@@ -16,10 +16,11 @@ export default function Map(){
     //     zoom: 11
     //   };
     
-    const classes = useStyles();
+    // const classes = useStyles();
     const isMobile = useMediaQuery('(min-width:600px)');
     
     const coordinates = { lat: 0, lng: 0 };
+   
     return(
         <div style={{ height: '100vh', width: '100%' }}>
             <GoogleMapReact bootstrapURLKeys={{key: ""}}
