@@ -20,7 +20,7 @@ export default function Map(){
     const isMobile = useMediaQuery('(min-width:600px)');
     
     const coordinates = { lat: 0, lng: 0 };
-   
+
     return(
         <div style={{ height: '100vh', width: '100%' }}>
             <GoogleMapReact bootstrapURLKeys={{key: ""}}
