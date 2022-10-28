@@ -4,22 +4,11 @@ import { Paper, Typography, useMediaQuery } from "@mui/material";
 import { LocationOnOutlined } from "@mui/icons-material";
 import Rating from "@mui/material";
 
-// import useStyles from './MapStyles';
-// const AnyReactComponent = ({ text }) => <div>{text}</div>;
-export default function Map(){
+export default function Map({setCoordinates, setBounds, coordinates}){
 
-    // const defaultProps = {
-    //     center: {
-    //       lat: 10.99835602,
-    //       lng: 77.01502627
-    //     },
-    //     zoom: 11
-    //   };
     
-    // const classes = useStyles();
     const isMobile = useMediaQuery('(min-width:600px)');
     
-    const coordinates = { lat: 0, lng: 0 };
 
     return(
         <div style={{ height: '100vh', width: '100%' }}>
@@ -29,7 +18,10 @@ export default function Map(){
                             defaultZoom={14}
                             margin={[50,50,50,50]}
                             option={''}
-                            onChange={''}
+                            onChange={(e)=>{
+                                setCoordinates({ lat: e.center.lat, lng: e.center.lng })
+                                setBounds({ ne: e.marginBounds.ne, sw: e.marginBounds.sw })
+                            }}
                             onChildClick={''} 
                             >
 
