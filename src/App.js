@@ -4,7 +4,7 @@ import Header from "./components/Header/Header";
 import List from "./components/List/List";
 import Map from "./components/Map/Map";
 
-import {getPlacesData} from './api'
+import {getPlacesData} from './api/index'
 
 const App = () =>{
 
@@ -19,6 +19,7 @@ const App = () =>{
     },[])
 
     useEffect(()=>{
+        console.log("bounds.sw is: "+bounds.sw)
         getPlacesData(bounds.sw, bounds.ne)
         .then(data => {
             setPlaces(data);
