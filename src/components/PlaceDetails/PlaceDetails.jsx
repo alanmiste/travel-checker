@@ -35,7 +35,19 @@ export default function PlaceDetails({place}){
 
                 {place?.cuisine?.map(({name})=>(
                     <Chip key={name} size="small" label={name} />
-                ))} 
+                ))}
+
+                {place?.address && (
+                    <Typography gutterBottom variant="subtitle2" color="textSecondary">
+                        <LocationOnIcon /> {place.address}
+                    </Typography>
+                )}
+
+                {place?.phone && (
+                    <Typography gutterBottom variant="subtitle2" color="textSecondary">
+                        <PhoneIcon /> {place.phone}
+                    </Typography>
+                )}
             </CardContent>
         </Card>
     );
