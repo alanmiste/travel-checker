@@ -1,7 +1,7 @@
 import React from "react";
 import { Box, Typography,Button, Chip, Card, CardActions, CardMedia, CardContent} from "@mui/material";
-import LocationOnIcon from '@mui/icons-material';
-import PhoneIcon from '@mui/icons-material';
+import LocationOnIcon from '@mui/icons-material/LocationOn';
+import PhoneIcon from '@mui/icons-material/Phone';
 import Rating from '@mui/lab';
 
 export default function PlaceDetails({place}){
