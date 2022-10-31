@@ -2,7 +2,7 @@ import React from "react";
 import GoogleMapReact from "google-map-react";
 import { Paper, Typography, useMediaQuery } from "@mui/material";
 import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
-import Rating from "@mui/material";
+import Rating from "@mui/material/Rating";
 
 export default function Map({setCoordinates, setBounds, coordinates, places}){
 
@@ -41,6 +41,7 @@ export default function Map({setCoordinates, setBounds, coordinates, places}){
                                                     src={place.photo ? place.photo.images.large.url : 'https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80'}
                                                     alt={place.name}
                                                     />
+                                                    <Rating size="small" value={Number(place.rating)} readOnly />
                                                 </Paper>
                                             )
                                         }
