@@ -4,7 +4,7 @@ import { Paper, Typography, useMediaQuery } from "@mui/material";
 import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
 import Rating from "@mui/material/Rating";
 
-export default function Map({setCoordinates, setBounds, coordinates, places}){
+export default function Map({setCoordinates, setBounds, coordinates, places, setChildCliked}){
 
     
     const isDesktop = useMediaQuery('(min-width:600px)');
@@ -22,7 +22,7 @@ export default function Map({setCoordinates, setBounds, coordinates, places}){
                                 setCoordinates({ lat: e.center.lat, lng: e.center.lng })
                                 setBounds({ ne: e.marginBounds.ne, sw: e.marginBounds.sw })
                             }}
-                            onChildClick={''} 
+                            onChildClick={(child)=> setChildCliked(child)} 
                             >
                                 {places?.map((place, i)=>(
                                     <div 

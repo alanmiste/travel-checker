@@ -4,7 +4,11 @@ import LocationOnIcon from '@mui/icons-material/LocationOn';
 import PhoneIcon from '@mui/icons-material/Phone';
 import Rating from '@mui/material/Rating';
 
-export default function PlaceDetails({place}){
+export default function PlaceDetails({place, selected, refProp}){
+
+    if(selected){
+        refProp?.current?.scrollIntoView({ behavior: "smooth", block: "start"})
+    }
 
     return(
         <Card elevation={6}>
