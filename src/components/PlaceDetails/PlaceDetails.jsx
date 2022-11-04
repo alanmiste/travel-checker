@@ -4,6 +4,8 @@ import LocationOnIcon from '@mui/icons-material/LocationOn';
 import PhoneIcon from '@mui/icons-material/Phone';
 import Rating from '@mui/material/Rating';
 
+import './PlaceDetails.css'
+
 export default function PlaceDetails({place, selected, refProp}){
 
     if(selected){
@@ -38,15 +40,15 @@ export default function PlaceDetails({place, selected, refProp}){
                     </Box>
                 ))}
                 {place?.cuisine?.map(({name})=>(
-                    <Chip key={name} size="small" label={name} />
+                    <Chip key={name} size="small" label={name} className="chip"/>
                 ))}
                 {place?.address && (
-                    <Typography gutterBottom variant="subtitle2" color="textSecondary">
+                    <Typography gutterBottom variant="subtitle2" color="textSecondary" className="subtitle">
                         <LocationOnIcon /> {place.address}
                     </Typography>
                 )}
                 {place?.phone && (
-                    <Typography gutterBottom variant="subtitle2" color="textSecondary">
+                    <Typography gutterBottom variant="subtitle2" color="textSecondary" className="spacing">
                         <PhoneIcon /> {place.phone}
                     </Typography>
                 )}
