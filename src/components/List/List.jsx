@@ -1,6 +1,7 @@
 import React, { useState, useEffect, createRef } from "react";
 import { CircularProgress, FormControl, Grid, InputLabel, MenuItem, Select, Typography } from "@mui/material";
 
+import './List.css';
 // import useStyles from './ListStyles';
 import PlaceDetails from '../PlaceDetails/PlaceDetails';
 
@@ -17,15 +18,15 @@ export default function List({places, childCliked, isLoading}){
     },[places])
 
     return(
-        <div>
+        <div className="listContainer">
             <Typography variant="h4">Restaurants and Hotels around you</Typography>
             {isLoading ? (
-                <div>
+                <div className="loading">
                     <CircularProgress size="5rem" />
                 </div>
             ) : (
                 <>
-            <FormControl>
+            <FormControl className="formControl">
                 <InputLabel>Type</InputLabel>
                 <Select value={type} onChange={ e=> setType(e.target.value)}>
                     <MenuItem value="restaurants">Restaurants</MenuItem>
@@ -33,7 +34,7 @@ export default function List({places, childCliked, isLoading}){
                     <MenuItem value="attractions">Attractions</MenuItem>
                 </Select>
             </FormControl>
-            <FormControl>
+            <FormControl className="formControl">
                 <InputLabel>Rating</InputLabel>
                 <Select value={rating} onChange={ e=> setRating(e.target.value)}>
                     <MenuItem value={0}>All</MenuItem>
@@ -43,7 +44,7 @@ export default function List({places, childCliked, isLoading}){
                 </Select>
             </FormControl>
 
-            <Grid container spaceing={3} >
+            <Grid container spaceing={3} className="listGrid">
                 {places?.map((place, index)=>(
                     <Grid item key={index} xs={12}>
                         <PlaceDetails 
