@@ -1,0 +1,14 @@
+.chip{
+    margin: 5px 5px 5px 0;
+}
+.subtitle{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+.spacing{
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+}

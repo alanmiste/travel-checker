@@ -1,0 +1,18 @@
+.listContainer{
+    padding: 25px;
+}
+.loading{
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.formControl{
+    margin: 10px;
+    min-width: 8em;
+    margin-bottom: 30px;
+}
+.listGrid{
+    height: 75vh;
+    overflow: auto;
+}

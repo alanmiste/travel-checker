@@ -4,6 +4,8 @@ import { Paper, Typography, useMediaQuery } from "@mui/material";
 import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
 import Rating from "@mui/material/Rating";
 
+import './Map.css'
+
 export default function Map({setCoordinates, setBounds, coordinates, places, setChildCliked}){
 
     
@@ -11,7 +13,7 @@ export default function Map({setCoordinates, setBounds, coordinates, places, set
     
 
     return(
-        <div style={{ height: '100vh', width: '100%' }}>
+        <div className="mapContainer">
             <GoogleMapReact bootstrapURLKeys={{key: ""}}
                             defaultCenter={coordinates}
                             center={coordinates}
@@ -25,7 +27,7 @@ export default function Map({setCoordinates, setBounds, coordinates, places, set
                             onChildClick={(child)=> setChildCliked(child)} 
                             >
                                 {places?.map((place, i)=>(
-                                    <div 
+                                    <div className="markerContainer"
                                     lat={Number(place.latitude)} 
                                     lng={Number(place.longitude)}
                                     key={i}>
@@ -33,11 +35,11 @@ export default function Map({setCoordinates, setBounds, coordinates, places, set
                                          !isDesktop ? (
                                                 <LocationOnOutlinedIcon color="primary" fontSize="large" />
                                             ) : (
-                                                <Paper elevation={3}>
+                                                <Paper elevation={3} className="paper">
                                                     <Typography gutterBottom variant="subtitle2">
                                                         {place.name}
                                                     </Typography>
-                                                    <img 
+                                                    <img className="pointer"
                                                     src={place.photo ? place.photo.images.large.url : 'https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80'}
                                                     alt={place.name}
                                                     />
