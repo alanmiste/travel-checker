@@ -5,11 +5,10 @@ import './List.css';
 // import useStyles from './ListStyles';
 import PlaceDetails from '../PlaceDetails/PlaceDetails';
 
-export default function List({places, childCliked, isLoading}){
+export default function List({places, childCliked, isLoading, type, setType, rating, setRating}){
     // const classes = useStyles();
 
-    const [type, setType] = useState("restaurants");
-    const [rating, setRating] = useState('');
+   
     const [elementRefs, setElementRefs] = useState([]);
 
     useEffect(()=>{
