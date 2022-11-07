@@ -1,22 +1,26 @@
-.mapContainer{
+.mapContainer {
     height: 90vh;
     width: 100%;
 }
-.markerContainer{
+
+.markerContainer {
     position: absolute;
     transform: translate(-50%, -50%);
     z-index: 1;
 }
-.mapContainer:hover{
+
+.mapContainer:hover {
     z-index: 2;
 }
-.paper{
+
+.paper {
     width: 150px;
     display: flex;
     justify-content: center;
     flex-direction: column;
     padding: 10px;
 }
-.pointer{
+
+.pointer {
     cursor: pointer;
 }
