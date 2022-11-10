@@ -1,17 +1,17 @@
-.toolbar{
+.toolbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.box{
+.box {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-left: 1em;
 }
 
-.searchIconAndInput{
+.searchIconAndInput {
     display: flex;
     justify-content: space-around;
     align-items: center;
